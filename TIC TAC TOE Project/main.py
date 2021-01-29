@@ -1,5 +1,5 @@
 print("This Project is Under Development")
 print("Roger That!")
 print("Git push working")
-import ArcticCloud as ac
-ac.PrintMarksheet("Satish Chandra Memorial School", [100,100,100,100,100,100], ["Himangshu De", "C", "15"])
+from ArcticCloud import MarkSheet as m
+m.PrintMarksheet("Satish Chandra Memorial School", [100,100,100,100,100,100], ["Apurba Ghosh", "C", 5])
