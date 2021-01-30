@@ -1,8 +1,12 @@
 
 data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
+GREEN = '\u001b[32m'
+YELLOW = '\u001b[33m'
+RESET = '\u001b[0m'
+RED = '\u001b[31m'
+CYAN = '\u001b[36m'
 
-
-def board(container : str = "", screenwidth : int = 59):
+def board(container : str = "", screenwidth : int = 59, sign1 = " ", sign2 = " ", sign3 = " "):
     counter = 0
     while counter <= 21:
         if counter == 0 or counter == 14 or counter == 7 or counter == 21:
@@ -12,19 +16,19 @@ def board(container : str = "", screenwidth : int = 59):
             continue
         
         if counter == 3:
-            container = f"|          {data_dic['a']}       |          {data_dic['b']}        |          {data_dic['c']}       |"
+            container = f"|          {data_dic['a']}       |          {data_dic['b']}        |          {data_dic['c']}       |" f"{sign1}"
             print(container)
             counter += 1 
             continue
         
         if counter == 10 :
-            container = f"|          {data_dic['d']}       |          {data_dic['e']}        |          {data_dic['f']}       |"
+            container = f"|          {data_dic['d']}       |          {data_dic['e']}        |          {data_dic['f']}       |" f"{sign2}"
             print(container)
             counter += 1
             continue
             
         if counter == 17:
-            container = f"|          {data_dic['g']}       |          {data_dic['h']}        |          {data_dic['i']}       |"
+            container = f"|          {data_dic['g']}       |          {data_dic['h']}        |          {data_dic['i']}       |" f"{sign3}"
             print(container)
             counter += 1
             continue
@@ -67,22 +71,8 @@ def overwrite(user : tuple):
         return True
     else:
         return False
-    
+
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 def game():
     board()
     winner = ""
@@ -107,32 +97,32 @@ def game():
                 pass
             
             if user1[1] == 'a':
-                data_dic['a'] = user1[0]
-                board()
+                data_dic['a'] = f"{RED}{user1[0]}{RESET}"
+                board(sign1=f"{GREEN} <--- {RESET}")
             if user1[1] == 'b':
-                data_dic['b'] = user1[0]
-                board()
+                data_dic['b'] = f"{RED}{user1[0]}{RESET}"
+                board(sign1=f"{GREEN} <--- {RESET}")
             if user1[1] == 'c':
-               data_dic['c'] = user1[0]
-               board()
+                data_dic['c'] = f"{RED}{user1[0]}{RESET}"
+                board(sign1=f"{GREEN} <--- {RESET}")
             if user1[1] == 'd':
-                data_dic['d'] = user1[0]
-                board()
+                data_dic['d'] = f"{RED}{user1[0]}{RESET}"
+                board(sign2=f"{GREEN} <--- {RESET}")
             if user1[1] == 'e':
-                data_dic['e'] = user1[0]
-                board()
+                data_dic['e'] = f"{RED}{user1[0]}{RESET}"
+                board(sign2=f"{GREEN} <--- {RESET}")
             if user1[1] == 'f':
-                data_dic['f'] = user1[0]
-                board()
+                data_dic['f'] = f"{RED}{user1[0]}{RESET}"
+                board(sign2=f"{GREEN} <--- {RESET}")
             if user1[1] == 'g':
-                data_dic['g'] = user1[0]
-                board()
+                data_dic['g'] = f"{RED}{user1[0]}{RESET}"
+                board(sign3=f"{GREEN} <--- {RESET}")
             if user1[1] == 'h':
-                data_dic['h'] = user1[0]
-                board()
+                data_dic['h'] = f"{RED}{user1[0]}{RESET}"
+                board(sign3=f"{GREEN} <--- {RESET}")
             if user1[1] == 'i':
-                data_dic['i'] = user1[0]
-                board()
+                data_dic['i'] = f"{RED}{user1[0]}{RESET}"
+                board(sign3=f"{GREEN} <--- {RESET}")
             
                 
         else:
@@ -153,32 +143,32 @@ def game():
                 pass
             
             if user2[1] == 'a':
-                data_dic['a'] = user2[0]
-                board()
+                data_dic['a'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign1=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'b':
-                data_dic['b'] = user2[0]
-                board()
+                data_dic['b'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign1=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'c':
-                data_dic['c'] = user2[0]
-                board()
+                data_dic['c'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign1=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'd':
-                data_dic['d'] = user2[0]
-                board()
+                data_dic['d'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign2=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'e':
-                data_dic['e'] = user2[0]
-                board()
+                data_dic['e'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign2=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'f':
-                data_dic['f'] = user2[0]
-                board()
+                data_dic['f'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign2=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'g':
-                data_dic['g'] = user2[0]
-                board()
+                data_dic['g'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign3=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'h':
-                data_dic['h'] = user2[0]
-                board()
+                data_dic['h'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign3=f"{YELLOW} <--- {RESET}")
             if user2[1] == 'i':
-               data_dic['i'] = user2[0]
-               board()
+                data_dic['i'] = f"{CYAN}{user2[0]}{RESET}"
+                board(sign3=f"{YELLOW} <--- {RESET}")
 
 
         counter += 1
