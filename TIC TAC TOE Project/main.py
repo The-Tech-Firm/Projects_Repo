@@ -35,7 +35,7 @@ def board(container : str = "", screenwidth : int = 59):
             counter += 1
                
         
-def check(a,b,c,d,e,f,g,h,i):
+def check(a : str ,b : str ,c : str ,d : str ,e : str ,f : str ,g : str ,h : str ,i : str ):
     
     # Part 1:
     if a == b == c:
@@ -61,19 +61,51 @@ def check(a,b,c,d,e,f,g,h,i):
     pass        
 
 
-
+def overwrite(user : tuple):
+    if data_dic[user[1]] != " ":
+        print("Sorry the Column is already filled, Please Choose any other Column...")
+        return True
+    else:
+        return False
     
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 def game():
     board()
     winner = ""
     counter = 1
-    dict1 = []
+    f = ""
     while counter <= 9:
         if counter%2 != 0:
             user1 = eval(input("Player 1, Enter the Cloumn: "))
             if user1[0] == 'exit':
                 print("Thanks For Playing")
+                f = 'a'
                 break
+            info = overwrite(user1)
+            if info == True:
+                user1 = eval(input("Player 1, Enter the Cloumn: "))
+                info2 = overwrite(user1)
+                if info2 == True:
+                    user1 = eval(input("Player 1, Enter the Cloumn: "))
+                else:
+                    pass
+            else:
+                pass
+            
             if user1[1] == 'a':
                 data_dic['a'] = user1[0]
                 board()
@@ -107,7 +139,19 @@ def game():
             user2 = eval(input("Player 2, Enter the Column: "))
             if user2[0] == 'exit':
                 print("Thanks For Playing")
+                f = 'b'
                 break
+            info = overwrite(user2)
+            if info == True:
+                user2 = eval(input("Player 2, Enter the Cloumn: "))
+                info2 = overwrite(user2)
+                if info2 == True:
+                    user2 = eval(input("Player 2, Enter the Cloumn: "))
+                else:
+                    pass
+            else:
+                pass
+            
             if user2[1] == 'a':
                 data_dic['a'] = user2[0]
                 board()
@@ -141,7 +185,10 @@ def game():
     
     winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
                    ,data_dic['g'],data_dic['h'],data_dic['i'])
-    print(f"Congratulations! Winner of the Game is {winner}")
+    if f == 'a' or f == 'b':
+        pass
+    else:
+        print(f"Congratulations! Winner of the Game is {winner}")
 
 if __name__ == '__main__':
     game()
@@ -153,3 +200,6 @@ in the dictionary and while giving input I will check if that column is already 
 Also need to add functionality such that A column cannot be Overwrite, and Adding color Functionality is still left.
 """
     
+    
+
+
