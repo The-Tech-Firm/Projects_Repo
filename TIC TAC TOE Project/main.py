@@ -4,26 +4,30 @@ data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " "
 
 def board(container : str = "", screenwidth : int = 59):
     counter = 0
-    while counter <= 22:
+    while counter <= 21:
         if counter == 0 or counter == 14 or counter == 7 or counter == 21:
             container = "-" * screenwidth
             print(container)
             counter += 1
+            continue
         
         if counter == 3:
             container = f"|          {data_dic['a']}       |          {data_dic['b']}        |          {data_dic['c']}       |"
             print(container)
             counter += 1 
+            continue
         
         if counter == 10 :
             container = f"|          {data_dic['d']}       |          {data_dic['e']}        |          {data_dic['f']}       |"
             print(container)
             counter += 1
+            continue
             
         if counter == 17:
             container = f"|          {data_dic['g']}       |          {data_dic['h']}        |          {data_dic['i']}       |"
             print(container)
             counter += 1
+            continue
             
         else:
             container = "|                  |                   |                  |"
@@ -37,12 +41,16 @@ def board(container : str = "", screenwidth : int = 59):
 
     
 def game():
+    board()
     winner = ""
     counter = 1
     dict1 = []
     while counter <= 9:
         if counter%2 != 0:
             user1 = eval(input("Player 1, Enter the Cloumn: "))
+            if user1[0] == 'exit':
+                print("Thanks For Playing")
+                break
             if user1[1] == 'a':
                 data_dic['a'] = user1[0]
                 board()
@@ -70,9 +78,13 @@ def game():
             if user1[1] == 'i':
                 data_dic['i'] = user1[0]
                 board()
+            
                 
         else:
             user2 = eval(input("Player 2, Enter the Column: "))
+            if user2[0] == 'exit':
+                print("Thanks For Playing")
+                break
             if user2[1] == 'a':
                 data_dic['a'] = user2[0]
                 board()
