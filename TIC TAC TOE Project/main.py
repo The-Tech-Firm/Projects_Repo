@@ -35,7 +35,30 @@ def board(container : str = "", screenwidth : int = 59):
             counter += 1
                
         
-        
+def check(a,b,c,d,e,f,g,h,i):
+    
+    # Part 1:
+    if a == b == c:
+        return a
+    if d == e == f:
+        return d
+    if g == h == i:
+        return g
+    
+    # Part 2:
+    if a == d == g:
+        return a
+    if b == e == h:
+        return b
+    if c == f == i:
+        return c
+    
+    # Part 3:
+    if a == e == i:
+        return a
+    if c == e == g:
+        return c
+    pass        
 
 
 
@@ -113,14 +136,12 @@ def game():
                data_dic['i'] = user2[0]
                board()
 
-        # checkResult = board()
-        # if checkResult[1] == "winner":
-        #     print(f"Congratulations {checkResult[0]} is the Winner") 
-        # else:
-        #     continue
-        counter += 1
-    pass
 
+        counter += 1
+    
+    winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
+                   ,data_dic['g'],data_dic['h'],data_dic['i'])
+    print(f"Congratulations! Winner of the Game is {winner}")
 
 if __name__ == '__main__':
     game()
@@ -129,8 +150,6 @@ if __name__ == '__main__':
 """ 
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
 in the dictionary and while giving input I will check if that column is already filled and also the checking will be done using the dictionary.
-Also need to add functionality such that A column cannot be Overwrite.
+Also need to add functionality such that A column cannot be Overwrite, and Adding color Functionality is still left.
 """
     
-# x = eval(input("Enter: "))
-# print(x[0],x[1])
