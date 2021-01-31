@@ -1,5 +1,6 @@
 
 data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
+Choice_dict = {'Player 1' : " ", 'Player 2' : " "}
 GREEN = '\u001b[32m'
 YELLOW = '\u001b[33m'
 RESET = '\u001b[0m'
@@ -77,7 +78,6 @@ def overwrite(user : tuple):
 def game():
     board()
     winner = ""
-    choice = ""
     counter = 1
     f = ""
     while counter <= 9:
@@ -87,6 +87,20 @@ def game():
                 print("Thanks For Playing")
                 f = 'a'
                 break
+            if Choice_dict['Player 1'] == " ":
+                pass
+            else:
+                if Choice_dict['Player 1'] == user1[0]:
+                    pass
+                else:
+                    print(f"Sorry You can't take {user1[0]}, You have to choose {Choice_dict['Player 1']}")
+                    user1 = eval(input("Player 1, Enter the Cloumn: "))
+                    if user1[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'a'
+                        break
+                    else:
+                        pass
             info = overwrite(user1)
             if info == True:
                 user1 = eval(input("Player 1, Enter the Cloumn: "))
@@ -125,7 +139,7 @@ def game():
             if user1[1] == 'i':
                 data_dic['i'] = f"{RED}{user1[0]}{RESET}"
                 board(sign3=f"{GREEN} <--- {RESET}")
-            choice = user1[0]
+            Choice_dict['Player 1'] = user1[0]
                 
         else:
             user2 = eval(input("Player 2, Enter the Column: "))
@@ -133,6 +147,20 @@ def game():
                 print("Thanks For Playing")
                 f = 'b'
                 break
+            if Choice_dict['Player 2'] == " ":
+                pass
+            else:
+                if Choice_dict['Player 2'] == user2[0]:
+                    pass
+                else:
+                    print(f"Sorry You can't take {user2[0]}, You have to choose {Choice_dict['Player 2']}")
+                    user2 = eval(input("Player 2, Enter the Cloumn: "))
+                    if user2[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'b'
+                        break
+                    else:
+                        pass
             info = overwrite(user2)
             if info == True:
                 user2 = eval(input("Player 2, Enter the Cloumn: "))
@@ -171,6 +199,8 @@ def game():
             if user2[1] == 'i':
                 data_dic['i'] = f"{CYAN}{user2[0]}{RESET}"
                 board(sign3=f"{YELLOW} <--- {RESET}")
+                
+            Choice_dict['Player 2'] = user2[0]
 
 
         counter += 1
@@ -191,7 +221,10 @@ My Approach is that I will create  a dictionary and each time a column is filed 
 in the dictionary and while giving input I will check if that column is already filled and also the checking will be done using the dictionary.
 Also need to add functionality such that A column cannot be Overwrite, and Adding color Functionality is still left.
 """
-    
+  
+  
+# choice_dict = {'Player 1' : "X", 'Player 2' : "O"}
+# print(choice_dict['Player 1'])  
     
 
 
