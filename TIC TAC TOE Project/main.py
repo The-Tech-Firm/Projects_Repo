@@ -5,6 +5,7 @@ YELLOW = '\u001b[33m'
 RESET = '\u001b[0m'
 RED = '\u001b[31m'
 CYAN = '\u001b[36m'
+MAGENTA = '\u001b[35m'
 
 def board(container : str = "", screenwidth : int = 59, sign1 = " ", sign2 = " ", sign3 = " "):
     counter = 0
@@ -76,6 +77,7 @@ def overwrite(user : tuple):
 def game():
     board()
     winner = ""
+    choice = ""
     counter = 1
     f = ""
     while counter <= 9:
@@ -123,7 +125,7 @@ def game():
             if user1[1] == 'i':
                 data_dic['i'] = f"{RED}{user1[0]}{RESET}"
                 board(sign3=f"{GREEN} <--- {RESET}")
-            
+            choice = user1[0]
                 
         else:
             user2 = eval(input("Player 2, Enter the Column: "))
@@ -178,8 +180,8 @@ def game():
     if f == 'a' or f == 'b':
         pass
     else:
-        print(f"Congratulations! Winner of the Game is {winner}")
-
+        print(f"{MAGENTA}Congratulations! Winner of the Game is {winner}")
+        
 if __name__ == '__main__':
     game()
     
