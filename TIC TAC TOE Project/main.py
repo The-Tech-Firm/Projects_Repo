@@ -219,12 +219,12 @@ if __name__ == '__main__':
 """ 
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
 in the dictionary and while giving input I will check if that column is already filled and also the checking will be done using the dictionary.
-Also need to add functionality such that A column cannot be Overwrite, and Adding color Functionality is still left.
+Also the Colors of each Variable and the Arrows pointing to the current input column is given, the Warning situation such as If entered a column 
+already filled then it will give warning and choice to re-enter twice and if Choosed a variable which is not the same as choosed in the beginning
+it will give a Warning and choice to re-enter once etc.
 """
   
-  
-# choice_dict = {'Player 1' : "X", 'Player 2' : "O"}
-# print(choice_dict['Player 1'])  
+ 
     
 
 
