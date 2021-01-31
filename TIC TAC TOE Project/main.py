@@ -7,6 +7,7 @@ RESET = '\u001b[0m'
 RED = '\u001b[31m'
 CYAN = '\u001b[36m'
 MAGENTA = '\u001b[35m'
+BOLD = '\u001b[1m'
 
 def board(container : str = "", screenwidth : int = 59, sign1 = " ", sign2 = " ", sign3 = " "):
     counter = 0
@@ -64,7 +65,10 @@ def check(a : str ,b : str ,c : str ,d : str ,e : str ,f : str ,g : str ,h : str
         return a
     if c == e == g:
         return c
-    pass        
+    else:
+        return " "
+    
+      
 
 
 def overwrite(user : tuple):
@@ -79,6 +83,7 @@ def game():
     board()
     winner = ""
     counter = 1
+    continuous_check = " "
     f = ""
     while counter <= 9:
         if counter%2 != 0:
@@ -140,7 +145,11 @@ def game():
                 data_dic['i'] = f"{RED}{user1[0]}{RESET}"
                 board(sign3=f"{GREEN} <--- {RESET}")
             Choice_dict['Player 1'] = user1[0]
-                
+            winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
+                   ,data_dic['g'],data_dic['h'],data_dic['i'])
+            if winner != " ":
+                continuous_check = (True,winner)
+                break
         else:
             user2 = eval(input("Player 2, Enter the Column: "))
             if user2[0] == 'exit':
@@ -201,16 +210,25 @@ def game():
                 board(sign3=f"{YELLOW} <--- {RESET}")
                 
             Choice_dict['Player 2'] = user2[0]
+            winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
+                   ,data_dic['g'],data_dic['h'],data_dic['i'])
+            if winner != " ":
+                continuous_check = (True,winner)
+                break
 
 
         counter += 1
     
-    winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
-                   ,data_dic['g'],data_dic['h'],data_dic['i'])
+    
     if f == 'a' or f == 'b':
         pass
     else:
-        print(f"{MAGENTA}Congratulations! Winner of the Game is {winner}")
+        if continuous_check[0] == True:
+            print(f"{MAGENTA}Congratulations! Winner of the Game is {continuous_check[1]}")
+        else:
+            winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
+                ,data_dic['g'],data_dic['h'],data_dic['i'])
+            print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD}{winner}")
         
 if __name__ == '__main__':
     game()
@@ -224,7 +242,8 @@ already filled then it will give warning and choice to re-enter twice and if Cho
 it will give a Warning and choice to re-enter once etc.
 """
   
- 
+
+
     
 
 
