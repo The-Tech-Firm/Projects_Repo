@@ -104,14 +104,64 @@ def game():
                         print("Thanks For Playing")
                         f = 'a'
                         break
+                    while user1[0] != Choice_dict['Player 1']:
+                        print(f"Sorry You can't take {user1[0]}, You have to choose {Choice_dict['Player 1']}")
+                        user1 = eval(input("Player 1, Enter the Cloumn: "))
+                        if user1[0] == 'exit':
+                            print("Thanks For Playing")
+                            f = 'a'
+                            break
+                    if user1[0] == 'exit':
+                        f = 'a'
+                        break
                     else:
                         pass
             info = overwrite(user1)
             if info == True:
                 user1 = eval(input("Player 1, Enter the Cloumn: "))
-                info2 = overwrite(user1)
-                if info2 == True:
+                if user1[0] == 'exit':
+                    print("Thanks For Playing")
+                    f = 'a'
+                    break
+                while user1[0] != Choice_dict['Player 1']:
+                    print(f"Sorry You can't take {user1[0]}, You have to choose {Choice_dict['Player 1']}")
                     user1 = eval(input("Player 1, Enter the Cloumn: "))
+                    if user1[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'a'
+                        break
+                if user1[0] == 'exit':
+                    f = 'a'
+                    break
+                info2 = overwrite(user1)
+                while info2 != False:
+                    user1 = eval(input("Player 1, Enter the Cloumn: "))
+                    if user1[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'a'
+                        break
+                    info2 = overwrite(user1)
+                    if Choice_dict['Player 1'] == user1[0]:
+                        pass
+                    else:
+                        print(f"Sorry You can't take {user1[0]}, You have to choose {Choice_dict['Player 1']}")
+                        user1 = eval(input("Player 1, Enter the Cloumn: "))
+                        if user1[0] == 'exit':
+                            print("Thanks For Playing")
+                            f = 'a'
+                            break
+                        while user1[0] != Choice_dict['Player 1']:
+                            print(f"Sorry You can't take {user1[0]}, You have to choose {Choice_dict['Player 1']}")
+                            user1 = eval(input("Player 1, Enter the Cloumn: "))
+                            if user1[0] == 'exit':
+                                print("Thanks For Playing")
+                                f = 'a'
+                                break
+                        info2 = overwrite(user1)
+                        
+                if user1[0] == 'exit':
+                    f = 'a'
+                    break   
                 else:
                     pass
             else:
@@ -151,7 +201,7 @@ def game():
                 continuous_check = (True,winner)
                 break
         else:
-            user2 = eval(input("Player 2, Enter the Column: "))
+            user2 = eval(input("Player 2, Enter the Cloumn: "))
             if user2[0] == 'exit':
                 print("Thanks For Playing")
                 f = 'b'
@@ -168,14 +218,64 @@ def game():
                         print("Thanks For Playing")
                         f = 'b'
                         break
+                    while user2[0] != Choice_dict['Player 2']:
+                        print(f"Sorry You can't take {user2[0]}, You have to choose {Choice_dict['Player 2']}")
+                        user2 = eval(input("Player 2, Enter the Cloumn: "))
+                        if user2[0] == 'exit':
+                            print("Thanks For Playing")
+                            f = 'b'
+                            break
+                    if user2[0] == 'exit':
+                        f = 'b'
+                        break
                     else:
                         pass
             info = overwrite(user2)
             if info == True:
                 user2 = eval(input("Player 2, Enter the Cloumn: "))
-                info2 = overwrite(user2)
-                if info2 == True:
+                if user2[0] == 'exit':
+                    print("Thanks For Playing")
+                    f = 'b'
+                    break
+                while user2[0] != Choice_dict['Player 2']:
+                    print(f"Sorry You can't take {user2[0]}, You have to choose {Choice_dict['Player 2']}")
                     user2 = eval(input("Player 2, Enter the Cloumn: "))
+                    if user2[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'b'
+                        break
+                if user2[0] == 'exit':
+                    f = 'b'
+                    break
+                info2 = overwrite(user2)
+                while info2 != False:
+                    user2 = eval(input("Player 2, Enter the Cloumn: "))
+                    if user2[0] == 'exit':
+                        print("Thanks For Playing")
+                        f = 'b'
+                        break
+                    info2 = overwrite(user2)
+                    if Choice_dict['Player 2'] == user2[0]:
+                        pass
+                    else:
+                        print(f"Sorry You can't take {user2[0]}, You have to choose {Choice_dict['Player 2']}")
+                        user2 = eval(input("Player 2, Enter the Cloumn: "))
+                        if user2[0] == 'exit':
+                            print("Thanks For Playing")
+                            f = 'b'
+                            break
+                        while user2[0] != Choice_dict['Player 2']:
+                            print(f"Sorry You can't take {user2[0]}, You have to choose {Choice_dict['Player 2']}")
+                            user2 = eval(input("Player 2, Enter the Cloumn: "))
+                            if user2[0] == 'exit':
+                                print("Thanks For Playing")
+                                f = 'b'
+                                break
+                        info2 = overwrite(user2)
+                        
+                if user2[0] == 'exit':
+                    f = 'b'
+                    break   
                 else:
                     pass
             else:
@@ -238,11 +338,11 @@ if __name__ == '__main__':
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
 in the dictionary and while giving input I will check if that column is already filled and also the checking will be done using the dictionary.
 Also the Colors of each Variable and the Arrows pointing to the current input column is given, the Warning situation such as If entered a column 
-already filled then it will give warning and choice to re-enter twice and if Choosed a variable which is not the same as choosed in the beginning
-it will give a Warning and choice to re-enter once etc.
+already filled then it will give warning and choice to re-enter and if Choosed a variable which is not the same as choosed in the beginning
+it will give a Warning and choice to re-enter, and all the Warnings and choice to re-enter are given untill the Choice is True with the given Conditions,
+as mentioned before.
 """
   
-
 
     
 
