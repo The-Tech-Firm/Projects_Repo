@@ -9,6 +9,7 @@ CYAN = '\u001b[36m'
 MAGENTA = '\u001b[35m'
 BOLD = '\u001b[1m'
 
+
 def board(container : str = "", screenwidth : int = 59, sign1 = " ", sign2 = " ", sign3 = " "):
     counter = 0
     while counter <= 21:
@@ -70,7 +71,6 @@ def check(a : str ,b : str ,c : str ,d : str ,e : str ,f : str ,g : str ,h : str
     
       
 
-
 def overwrite(user : tuple):
     if data_dic[user[1]] != " ":
         print("Sorry the Column is already filled, Please Choose any other Column...")
@@ -80,6 +80,8 @@ def overwrite(user : tuple):
 
  
 def game():
+    name1 = input('Player 1, Enter Your Name: ')
+    name2 = input('Player 2, Enter Your Name: ')
     board()
     winner = ""
     counter = 1
@@ -324,11 +326,25 @@ def game():
         pass
     else:
         if continuous_check[0] == True:
-            print(f"{MAGENTA}Congratulations! Winner of the Game is {continuous_check[1]}")
+            key_list = list(Choice_dict.keys())
+            value_list = list(Choice_dict.values())
+            position1 = value_list.index('X')
+            position2 = value_list.index('O')
+            if continuous_check[1] == f'{RED}X{RESET}':
+                print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD} {key_list[position1]}")
+            else:
+                print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD} {key_list[position2]}")
         else:
             winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
                 ,data_dic['g'],data_dic['h'],data_dic['i'])
-            print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD}{winner}")
+            key_list = list(Choice_dict.keys())
+            value_list = list(Choice_dict.values())
+            position1 = value_list.index('X')
+            position2 = value_list.index('O')
+            if winner == f'{RED}X{RESET}':
+                print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD} {key_list[position1]}")
+            else:
+                print(f"{MAGENTA}Congratulations! Winner of the Game is{BOLD} {key_list[position2]}")
         
 if __name__ == '__main__':
     game()
