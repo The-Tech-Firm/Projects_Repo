@@ -171,31 +171,31 @@ def game():
             
             if user1[1] == 'a':
                 data_dic['a'] = f"{RED}{user1[0]}{RESET}"
-                board(sign1=f"{GREEN} <--- {RESET}")
+                board(sign1=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'b':
                 data_dic['b'] = f"{RED}{user1[0]}{RESET}"
-                board(sign1=f"{GREEN} <--- {RESET}")
+                board(sign1=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'c':
                 data_dic['c'] = f"{RED}{user1[0]}{RESET}"
-                board(sign1=f"{GREEN} <--- {RESET}")
+                board(sign1=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'd':
                 data_dic['d'] = f"{RED}{user1[0]}{RESET}"
-                board(sign2=f"{GREEN} <--- {RESET}")
+                board(sign2=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'e':
                 data_dic['e'] = f"{RED}{user1[0]}{RESET}"
-                board(sign2=f"{GREEN} <--- {RESET}")
+                board(sign2=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'f':
                 data_dic['f'] = f"{RED}{user1[0]}{RESET}"
-                board(sign2=f"{GREEN} <--- {RESET}")
+                board(sign2=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'g':
                 data_dic['g'] = f"{RED}{user1[0]}{RESET}"
-                board(sign3=f"{GREEN} <--- {RESET}")
+                board(sign3=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'h':
                 data_dic['h'] = f"{RED}{user1[0]}{RESET}"
-                board(sign3=f"{GREEN} <--- {RESET}")
+                board(sign3=f"{GREEN} <<--- {RESET}")
             if user1[1] == 'i':
                 data_dic['i'] = f"{RED}{user1[0]}{RESET}"
-                board(sign3=f"{GREEN} <--- {RESET}")
+                board(sign3=f"{GREEN} <<--- {RESET}")
             Choice_dict['Player 1'] = user1[0]
             winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
                    ,data_dic['g'],data_dic['h'],data_dic['i'])
@@ -285,31 +285,31 @@ def game():
             
             if user2[1] == 'a':
                 data_dic['a'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign1=f"{YELLOW} <--- {RESET}")
+                board(sign1=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'b':
                 data_dic['b'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign1=f"{YELLOW} <--- {RESET}")
+                board(sign1=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'c':
                 data_dic['c'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign1=f"{YELLOW} <--- {RESET}")
+                board(sign1=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'd':
                 data_dic['d'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign2=f"{YELLOW} <--- {RESET}")
+                board(sign2=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'e':
                 data_dic['e'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign2=f"{YELLOW} <--- {RESET}")
+                board(sign2=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'f':
                 data_dic['f'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign2=f"{YELLOW} <--- {RESET}")
+                board(sign2=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'g':
                 data_dic['g'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign3=f"{YELLOW} <--- {RESET}")
+                board(sign3=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'h':
                 data_dic['h'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign3=f"{YELLOW} <--- {RESET}")
+                board(sign3=f"{YELLOW} <<--- {RESET}")
             if user2[1] == 'i':
                 data_dic['i'] = f"{CYAN}{user2[0]}{RESET}"
-                board(sign3=f"{YELLOW} <--- {RESET}")
+                board(sign3=f"{YELLOW} <<--- {RESET}")
                 
             Choice_dict['Player 2'] = user2[0]
             winner = check(data_dic['a'],data_dic['b'],data_dic['c'],data_dic['d'],data_dic['e'],data_dic['f']
@@ -356,7 +356,8 @@ in the dictionary and while giving input I will check if that column is already 
 Also the Colors of each Variable and the Arrows pointing to the current input column is given, the Warning situation such as If entered a column 
 already filled then it will give warning and choice to re-enter and if Choosed a variable which is not the same as choosed in the beginning
 it will give a Warning and choice to re-enter, and all the Warnings and choice to re-enter are given untill the Choice is True with the given Conditions,
-as mentioned before.
+as mentioned before.The Player who takes the winning variable, his name gets displayed at the end while declearing the winner, and this is acheived 
+by storing the variable choosed by each user at the beginning and then calling the key of the dictionary from the value. 
 """
   
 
