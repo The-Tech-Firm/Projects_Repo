@@ -135,7 +135,7 @@ def game():
         if (counter%2 != 0):
             user1 = eval(input("Player 1, Enter the Cloumn: "))
             if (user1[0] == 'exit'):
-                print("Thanks For Playing")
+                print(f"{BLUE}Thanks For Playing{RESET}")
                 f = 'a'
                 break
             if (Choice_dict['Player 1'] == " "):
