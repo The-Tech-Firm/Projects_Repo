@@ -450,7 +450,7 @@ def game():
             pass
 if __name__ == '__main__':
     game()
-    
+colorama.deinit()    
     
 """ 
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
