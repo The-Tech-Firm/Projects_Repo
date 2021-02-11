@@ -21,19 +21,17 @@
 
 """Q2 Display even position elements from a user input."""
 
+user_string = "String"
 
+length = len(user_string)
+print("The even position elements are: ")
+list1 =[]
+for i in range(0, length):
+    if i%2 == 0:
+        list1.append(user_string[i])
+    else:
+        continue
 
-
-
-
-
-
-
-
-
-
-
-
-
+print(*list1, sep=", ")
 
 
