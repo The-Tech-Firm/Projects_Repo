@@ -1,5 +1,6 @@
 # -------------------------------------- Global Variables -------------------------------------#
 import random
+import time
 data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
 Choice_dict = {'Player 1' : " ", 'Player 2' : " ", 'Computer': " "}
 var = random.choice(['X','O','$','#','%','&','@'])
@@ -448,7 +449,7 @@ def game():
             pass
 if __name__ == '__main__':
     game()
-    
+time.sleep(2.4)    
     
 """ 
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
