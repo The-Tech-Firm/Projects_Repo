@@ -1,5 +1,5 @@
 import colorama
-
+import time
 colorama.init()
 import random
 data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
@@ -450,7 +450,8 @@ def game():
             pass
 if __name__ == '__main__':
     game()
-colorama.deinit()    
+colorama.deinit()
+time.sleep(2.4)   
     
 """ 
 My Approach is that I will create  a dictionary and each time a column is filed I will pass the column name and the value given to that column
