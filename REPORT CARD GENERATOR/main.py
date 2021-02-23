@@ -150,7 +150,7 @@ def ReportCard(*args : tuple, screenwidth : int = 64):
             counter += 1
             
         if counter == 32:
-            container = f"The Activities the Student has participated in (is/are) {args[16]}."
+            container = f"The Activities the Student has participated in is {args[16]}."
             print(f"|{UNDERLINE}{container.ljust(screenwidth, ' ')}{RESET}|")
             counter += 1
             
@@ -201,8 +201,8 @@ def main():
     activities = input("Activities Participated (if any, not more than 1): ")
     print()
     print()
-    print("""Now Generating Annual Report Card of SURYADUYTI BANERJEE 
-for the Session 2020-2021 of Class 11..... """)
+    print(f"""Now Generating Annual Report Card of {name} 
+for the Session 2020-2021 of Class {Class}..... """)
     print()
     grade1 = Grader(int(marks[0]))
     grade2 = Grader(int(marks[1]))
