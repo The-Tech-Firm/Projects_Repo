@@ -1,6 +1,8 @@
 # -------------------------------------- Global Variables -------------------------------------#
 import random
 import time
+import colorama
+colorama.init()
 data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
 Choice_dict = {'Player 1' : " ", 'Player 2' : " ", 'Computer': " "}
 var = random.choice(['X','O','$','#','%','&','@'])
@@ -449,6 +451,7 @@ def game():
             pass
 if __name__ == '__main__':
     game()
+colorama.deinit()
 time.sleep(2.4)    
     
 """ 
