@@ -55,7 +55,7 @@ def mainFuntion():
                 pass
             
         
-        if pwd[i] in "-_!@#$%^&*()|+=?\/><:;[]}{" and pwd[i] in "0123456789":
+        if pwd[i] in "-_!@#$%^&*()|+=?\/><:;[]}{":
             if var2 == False:
                 var2 = True
             else:
