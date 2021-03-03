@@ -43,13 +43,29 @@ def mainFuntion():
 
     for i in range(len(pwd)):
         if pwd[i].isupper() == True:
-            var1 = True
-        
-        if pwd[i] not in "-_!@#$%^&*()|+=?\/><:;[]}{0123456789":
-            var2 = False
+            if var1 == False:
+                var1 = True
+            else:
+                pass
+            
+        else:
+            if var1 == False:
+                var1 = False
+            else:
+                pass
+            
         
         if pwd[i] in "-_!@#$%^&*()|+=?\/><:;[]}{0123456789":
-            var2 = True
+            if var2 == False:
+                var2 = True
+            else:
+                pass
+        
+        else:
+            if var2 == False:
+                var2 = False
+            else:
+                pass
         
     
     if user1 == '' and pwd == '':
