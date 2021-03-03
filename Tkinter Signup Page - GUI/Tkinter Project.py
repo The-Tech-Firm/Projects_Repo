@@ -172,7 +172,7 @@ passEntry =  Entry(root, width=20,textvariable=password)
 passEntry.grid(row=1, column=1)
 passEntry.focus()
 
-newlabel2= Label(root, text='Password must have atleast 8 characters(UpperCase, numbers and special chars.)\nUsername should be of Alphanumeric', foreground='red')
+newlabel2= Label(root, text='Password must have atleast 8 characters(UpperCase and special chars.)\nUsername should be of Alphanumeric', foreground='red')
 newlabel2.grid(row=3, column=1)
 
 
