@@ -1,6 +1,6 @@
 """
-The Game has a board where each column has a name starting from a - i, in left - right order,
-Sample input  : ['X', 'a'] or ('X', 'a'), where in the list or tuple the forst element is the Charecter you have chosen for the 
+The Game has a board where each column has a name starting from a -> i, in left -> right order,
+Sample input  : ['X', 'a'] or ('X', 'a'), where in the list or tuple the first element is the Charecter you have chosen for the 
 game and second element is the column you have choosen for the input.
 """
 
