@@ -1,9 +1,15 @@
+"""
+The Game has a board where each column has a name starting from a - i, in left - right order,
+Sample input  : ['X', 'a'] or ('X', 'a'), where in the list or tuple the forst element is the Charecter you have chosen for the 
+game and second element is the column you have choosen for the input.
+"""
+
 # -------------------------------------- Global Variables -------------------------------------#
 import random
 import time
 import colorama
 colorama.init()
-data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
+data_dic = {'a': " ", 'bi': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
 Choice_dict = {'Player 1' : " ", 'Player 2' : " ", 'Computer': " "}
 var = random.choice(['X','O','$','#','%','&','@'])
 GREEN = '\u001b[32m'
