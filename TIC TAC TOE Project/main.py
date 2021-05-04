@@ -9,7 +9,7 @@ import random
 import time
 import colorama
 colorama.init()
-data_dic = {'a': " ", 'bi': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
+data_dic = {'a': " ", 'b': " ", 'c': " ", 'd': " ", 'e': " ", 'f': " ", 'g': " ", 'h': " ", 'i': " "}
 Choice_dict = {'Player 1' : " ", 'Player 2' : " ", 'Computer': " "}
 var = random.choice(['X','O','$','#','%','&','@'])
 GREEN = '\u001b[32m'
