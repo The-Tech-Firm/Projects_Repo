@@ -1,3 +1,1 @@
-main.py and main2.py contains the same code just that, main2.py is for those who want to run the program in the old windows powershell or 
-Command prompt and not any IDE or mordern text Editors,
-as it has ANSI codes.
+This folder has main.py file which contains all the codes it, has Color Funtionality so if it does not work consider downloading the Colorama Module in Python AND yes do not try to run this code on Python IDLE it might misbehave.
